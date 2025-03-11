@@ -7,13 +7,13 @@ let i;
 
 // Initiates the program to print numbers from 1 - 100
 for (i = 1; i <= 100; i++) {
-    if (i % 3 == 0 && i % 5== 0) {
+    if (i % 3 == 0 && i % 5== 0) {  // Checks for all numbers that are divisible by 3 and 5
         console.log("FizzBuzz");
-    } else if (i % 3 == 0) {
+    } else if (i % 3 == 0) {  // Checks for numbers divisible by 3 & prints Fizz
         console.log("Fizz");
-    } else if (i % 5 == 0) {
+    } else if (i % 5 == 0) {  // Checks for number divisible only by 5 and not 3
         console.log("Buzz")
     } else {
-        console.log(i);
+        console.log(i); // Prints all numbers from 1 - 100
     }
 }
