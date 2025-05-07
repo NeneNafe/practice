@@ -1,36 +1,26 @@
 /*
-- A function countBs that takes a string as an argument
-- returns a number that indicates how many chars in uppercase are in the string
-- A function countChar that accepts a second arg that indicates the char to be counted
+- Function that returns a number that indicates
+-how many uppercase "B" characters are in a string
+- A function that returns the number of time a char appears in a string
 */
 
-function countBs(string) {
+function countChar(string, charToCount) {
     let count = 0;
 
-    for (let char of string) {  // Iterates through the string
-        if (char >= 'A' && char <= 'Z') {  // Checks for upprcase characters
-            count ++;  // Adds 1 to evry found case
-        }
-    }
-    return count;  
-}
-
-function countChar(string, charCount) {
-    let count = 0;
-
-    for (let char of string) {
-        if (char === charCount) {  // current charr equals the one called by the func
-            count++;  // Adds 1 to every similar char called
+    for (i = 0; i < string.length; i++) { // Indexes through the string from start to end
+        if (string[i] == charToCount) { // Checks if the current is the called one
+            count ++;
         }
     }
     return count;
 }
-// Test cases for countBs
-console.log(countBs("Alinafe Nene Chiwaya"));
-console.log(countBs("Mercy Bambi"));
-console.log(countBs("dambula clan"));
 
-// Test cases for countChar
-console.log(countChar("Eloquent Javascript", "q"));
-console.log(countChar("Yo! this is amazing!", "!"));
-console.log(countChar(" ", " "));
+function countBs(string) {
+    return countChar(string, "B"); // Checks for then umber of uppercase B chars
+}
+
+// Test cases
+console.log(countBs("Blushing Bride"));
+console.log(countBs("Cake"));
+console.log(countChar("Anaconda", "a"));
+console.log(countChar("cocomelon", "o"));
