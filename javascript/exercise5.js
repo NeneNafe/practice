@@ -11,10 +11,13 @@ function isEven(N) {
     else if (N == 1) {
         return false;  // One is Odd
     }
+    else if (N < 0) {  // -1 is false
+        return false;
+    }
     else {
-        return isEven(N -2);  // Recursice call made
+        return isEven(N - 2);  // Recursice call made
     }
 }
 console.log(isEven(50));  // true
 console.log(isEven(75));  // false
-console.log(isEven(-1));  // Error - Stack Overflow
+console.log(isEven(-1));  // false
