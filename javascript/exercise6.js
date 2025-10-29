@@ -16,7 +16,7 @@ function countChar(string, charToCount) {
 }
 
 function countBs(string) {
-    return countChar(string, "B"); // Checks for then umber of uppercase B chars
+    return countChar(string, "B"); // Checks for the number of uppercase B chars
 }
 
 // Test cases
